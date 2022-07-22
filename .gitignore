@@ -1,3 +1,4 @@
+Procfile
 target/
 .env
 .idea/
@@ -6,4 +7,3 @@ target/
 .project
 .settings/
 .vscode
-*Procfile
