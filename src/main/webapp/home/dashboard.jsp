@@ -7,7 +7,7 @@ pageEncoding="UTF-8"%>
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Aviato | E-commerce template</title>
+  <title>camiusco dashboard</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -62,7 +62,7 @@ pageEncoding="UTF-8"%>
 				<div class="dashboard-wrapper user-dashboard">
 					<div class="media">
 						<div class="pull-left">
-							<img class="media-object user-img" src="images/avater.jpg" alt="Image">
+							<img class="media-object user-img" src="../images/avater.jpg" alt="Image">
 						</div>
 						<div class="media-body">
 							<h2 class="media-heading">Welcome Adam Smith</h2>

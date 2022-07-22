@@ -14,7 +14,7 @@
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
-					<a href="index.html">
+					<a href="index.jsp">
 						<!-- replace logo here -->
 						<svg width="225px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -73,8 +73,8 @@
 								<span class="total-price">$1799.00</span>
 							</div>
 							<ul class="text-center cart-buttons">
-								<li><a href="cart.html" class="btn btn-small">View Cart</a></li>
-								<li><a href="checkout.html" class="btn btn-small btn-solid-border">Checkout</a></li>
+								<li><a href="cart.jsp" class="btn btn-small">View Cart</a></li>
+								<li><a href="checkout.jsp" class="btn btn-small btn-solid-border">Checkout</a></li>
 							</ul>
 						</div>
 

@@ -26,16 +26,16 @@
 				</ul>
 				<ul class="footer-menu text-uppercase">
 					<li>
-						<a href="contact.html">CONTACT</a>
+						<a href="contact.jsp">CONTACT</a>
 					</li>
 					<li>
-						<a href="about.html">ABOUT US</a>
+						<a href="about.jsp">ABOUT US</a>
 					</li>
 					<li>
-						<a href="faq.html">FAQ</a>
+						<a href="faq.jsp">FAQ</a>
 					</li>
 					<li>
-						<a href="shop.html">SHOP</a>
+						<a href="shop.jsp">SHOP</a>
 					</li>
 				</ul>
 				<p class="copyright-text">Copyright &copy;2022, Designed &amp; Developed by Los Tres Mosqueteros</p>

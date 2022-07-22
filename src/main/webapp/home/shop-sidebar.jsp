@@ -1,7 +1,134 @@
-<div class="container">
-		
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>camiusco shop-sidebar</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Constra HTML Template v1.0">
+  
+  <jsp:include page="/portal/css.jsp" />
+
+</head>
+
+<body id="body">
+
+<!-- Start Top Header Bar -->
+<jsp:include page="/portal/top-header-bar.jsp" />
+<!-- End Top Header Bar -->
+
+
+<!-- Main Menu Section -->
+<jsp:include page="/portal/menu.jsp" />
+
+<section class="page-header">
+	<div class="container">
 		<div class="row">
-			
+			<div class="col-md-12">
+				<div class="content">
+					<h1 class="page-name">Shop</h1>
+					<ol class="breadcrumb">
+						<li><a href="index.jsp">Home</a></li>
+						<li class="active">shop</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="products section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="widget">
+					<h4 class="widget-title">Short By</h4>
+					<form method="post" action="#">
+                        <select class="form-control">
+                            <option>Man</option>
+                            <option>Women</option>
+                            <option>Accessories</option>
+                            <option>Shoes</option>
+                        </select>
+                    </form>
+	            </div>
+				<div class="widget product-category">
+					<h4 class="widget-title">Categories</h4>
+					<div class="panel-group commonAccordion" id="accordion" role="tablist" aria-multiselectable="true">
+					  	<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      	<h4 class="panel-title">
+						        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						          	Shoes
+						        	</a>
+						      	</h4>
+						    </div>
+					    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<ul>
+									<li><a href="#!">Brand & Twist</a></li>
+									<li><a href="#!">Shoe Color</a></li>
+									<li><a href="#!">Shoe Color</a></li>
+								</ul>
+							</div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					         	Duty Wear
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					    	<div class="panel-body">
+					     		<ul>
+									<li><a href="#!">Brand & Twist</a></li>
+									<li><a href="#!">Shoe Color</a></li>
+									<li><a href="#!">Shoe Color</a></li>
+								</ul>
+					    	</div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          	WorkOut Shoes
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					    	<div class="panel-body">
+					      		<ul>
+									<li><a href="#!">Brand & Twist</a></li>
+									<li><a href="#!">Shoe Color</a></li>
+									<li><a href="#!">Gladian Shoes</a></li>
+									<li><a href="#!">Swis Shoes</a></li>
+								</ul>
+					    	</div>
+					    </div>
+					  </div>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="row">
+					
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
@@ -270,5 +397,21 @@
 		  	</div>
 		</div><!-- /.modal -->
 
+				</div>				
+			</div>
+		
 		</div>
 	</div>
+</section>
+
+
+<jsp:include page="/portal/footer.jsp" />
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <jsp:include page="/portal/scripts.jsp" />
+
+  </body>
+  </html>

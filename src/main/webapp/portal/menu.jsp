@@ -19,7 +19,7 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="index.html">Home</a>
+						<a href="index.jsp">Home</a>
 					</li><!-- / Home -->
 
 
@@ -36,9 +36,9 @@
 									<ul>
 										<li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="cart.html">Cart</a></li>
+										<li><a href="shop.jsp">Shop</a></li>
+										<li><a href="checkout.jsp">Checkout</a></li>
+										<li><a href="cart.jsp">Cart</a></li>
 
 									</ul>
 								</div>
