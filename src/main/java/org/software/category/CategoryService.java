@@ -31,11 +31,14 @@ public class CategoryService {
 		int inserteds = 0;
 		try {
 			connection1 = database.getConnection("admin");
-			sql = "INSERT INTO categories(name, icon)";
-			sql += " VALUES (?, ?)";
+			sql = "INSERT INTO categoria(nombre, 'descripción', imagen, publicado)";
+			sql += " VALUES (?, ?, ?, ?)";
 			preparedStatement1 = connection1.prepareStatement(sql);
-			preparedStatement1.setString(1, category.getName());
-			preparedStatement1.setString(2, category.getIcon());
+			preparedStatement1.setString(1, category.getNombre());
+			preparedStatement1.setString(2, category.getDescripcion());
+			preparedStatement1.setString(3, category.getImagen());
+			preparedStatement1.setInt(4, category.getPublicado());
+
 			inserteds = preparedStatement1.executeUpdate();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.toString());
@@ -66,18 +69,20 @@ public class CategoryService {
 		try {
 			connection1 = database.getConnection("admin");
 			statement1 = connection1.createStatement();
-			sql = "select * from categories";
+			sql = "select * from categoria";
 			rs1 = statement1.executeQuery(sql);
 			while (rs1.next()) {
 				int id = rs1.getInt("id");
-				int published = rs1.getInt("published");
-				String name = rs1.getString("name");
-				String icon = rs1.getString("icon");
+				String nombre = rs1.getString("nombre");
+				String descripcion = rs1.getString("descripción");
+				String imagen = rs1.getString("imagen");
+				int publicado = rs1.getInt("publicado");
 				Category category = new Category();
 				category.setId(id);
-				category.setPublished(published);
-				category.setName(name);
-				category.setIcon(icon);
+				category.setNombre(nombre);
+				category.setDescripcion(descripcion);
+				category.setImagen(imagen);
+				category.setPublicado(publicado);
 				categoryList.add(category);
 			}
 		} catch (Exception e) {
@@ -90,7 +95,7 @@ public class CategoryService {
 		return new CategoryList(categoryList);
 	}
 
-	@PUT
+/* 	@PUT
 	@Path("/{id}")
 	@Consumes({ "application/json" })
 	@Produces("application/json")
@@ -156,5 +161,5 @@ public class CategoryService {
 			mensaje = "{\"mensaje\":\"Error al eliminar\"}";
 			return Response.status(400).entity(mensaje).build();
 		}
-	}
+	} */
 }

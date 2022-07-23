@@ -4,51 +4,63 @@ package org.software.category;
 
 public class Category {
 	private long id;
-	private int published;
-	private String name;
-	private String icon;
+	private String nombre;
+	private String descripcion;
+	private String imagen;
+	private int publicado;
 
 	public Category() {
 		super();
 	}
 
-	public Category(long id, int published, String name, String icon) {
+	public Category(long id, String nombre, String descripcion,String imagen, int publicado) {
 		super();
 		this.id = id;
-		this.published = published;
-		this.name = name;
-		this.icon = icon;
+		this.nombre=nombre;
+		this.descripcion=descripcion;
+		this.imagen=imagen;
+		this.publicado=publicado;
 	}
 
 	public long getId() {
 		return id;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public int getPublicado() {
+		return publicado;
+	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
 
-	public int getPublished() {
-		return published;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public void setPublished(int published) {
-		this.published = published;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
-	public String getName() {
-		return name;
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setPublicado(int publicado) {
+		this.publicado = publicado;
 	}
 
-	public String getIcon() {
-		return icon;
-	}
-
-	public void setIcon(String icon) {
-		this.icon = icon;
-	}
+		
 }

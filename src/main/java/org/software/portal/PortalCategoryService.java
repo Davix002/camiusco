@@ -13,7 +13,7 @@ import org.software.util.DataBase;
 
 @Path("/portal")
 public class PortalCategoryService {
-	@GET
+	/* @GET
 	@Path("/categories")
 	@Produces("application/json")
 	public CategoryList read() {
@@ -49,5 +49,5 @@ public class PortalCategoryService {
 			database.closeObject(connection1);
 		}
 		return new CategoryList(categoryList);
-	}
+	} */
 }

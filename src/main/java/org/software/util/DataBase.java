@@ -25,9 +25,11 @@ public class DataBase {
 		if (profile.equals("admin")) {
 			JndiDataSourceName = "eCommerceAdminDS";
 		}
+
 		if (profile.equals("client")) {
 			JndiDataSourceName = "eCommerceClientDS";
 		}
+		
 		if (profile.equals("guest")) {
 			JndiDataSourceName = "eCommerceGuestDS";
 		}

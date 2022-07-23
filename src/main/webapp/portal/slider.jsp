@@ -10,7 +10,7 @@
       </div>
     </div>
   </div>
-  <div class="slider-item th-fullpage hero-area" style="background-image: url(/images/slider/slider2.jpg);">
+  <div class="slider-item th-fullpage hero-area" style="background-image: url(/images/slider/slider3.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 text-left">
@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-  <div class="slider-item th-fullpage hero-area" style="background-image: url(/images/slider/slider3.jpg);">
+  <div class="slider-item th-fullpage hero-area" style="background-image: url(/images/slider/slider2.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 text-right">
