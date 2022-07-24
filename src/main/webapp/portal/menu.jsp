@@ -34,8 +34,8 @@
 								<!-- Basic -->
 								<div class="col-lg-12 col-md-12 mb-sm-auto">
 									<ul>
-										<li class="dropdown-header">Pages</li>
-										<li role="separator" class="divider"></li>
+										<%-- <li class="dropdown-header">Pages</li>
+										<li role="separator" class="divider"></li> --%>
 										<li><a href="shop.jsp">Shop</a></li>
 										<li><a href="checkout.jsp">Checkout</a></li>
 										<li><a href="cart.jsp">Cart</a></li>
@@ -46,6 +46,28 @@
 							</div><!-- / .row -->
 						</div><!-- / .dropdown-menu -->
 					</li><!-- / Shop -->
+
+					<!-- Categorias -->
+					<li class="dropdown dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+							role="button" aria-haspopup="true" aria-expanded="false">Categor&Iacuteas <span
+								class="tf-ion-ios-arrow-down"></span></a>
+						<div class="dropdown-menu">
+							<div class="row">
+
+								<!-- Basic -->
+								<div class="col-lg-12 col-md-12 mb-sm-auto">
+									<ul>
+										<li><a href="shop.jsp?id=1">Buzos</a></li>
+										<li><a href="shop.jsp?id=2">Camisetas</a></li>
+										<li><a href="shop.jsp?id=3">Ropa deportiva</a></li>
+
+									</ul>
+								</div>
+
+							</div><!-- / .row -->
+						</div><!-- / .dropdown-menu -->
+					</li><!-- / Categorias -->
 
 				</ul><!-- / .nav .navbar-nav -->
 

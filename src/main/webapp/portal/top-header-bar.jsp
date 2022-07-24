@@ -37,7 +37,7 @@
 						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
 								class="tf-ion-android-cart"></i>Cart</a>
 						<div class="dropdown-menu cart-dropdown">
-							<!-- Cart Item -->
+							<%-- <!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
 									<img class="media-object" src="../images/shop/cart/cart-1.jpg" alt="image" />
@@ -51,8 +51,8 @@
 									<h5><strong>$1200</strong></h5>
 								</div>
 								<a href="#!" class="remove"><i class="tf-ion-close"></i></a>
-							</div><!-- / Cart Item -->
-							<!-- Cart Item -->
+							</div><!-- / Cart Item --> --%>
+							<%-- <!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
 									<img class="media-object" src="../images/shop/cart/cart-2.jpg" alt="image" />
@@ -66,11 +66,11 @@
 									<h5><strong>$1200</strong></h5>
 								</div>
 								<a href="#!" class="remove"><i class="tf-ion-close"></i></a>
-							</div><!-- / Cart Item -->
+							</div><!-- / Cart Item --> --%>
 
 							<div class="cart-summary">
 								<span>Total</span>
-								<span class="total-price">$1799.00</span>
+								<span class="total-price">$0.00</span>
 							</div>
 							<ul class="text-center cart-buttons">
 								<li><a href="cart.jsp" class="btn btn-small">View Cart</a></li>

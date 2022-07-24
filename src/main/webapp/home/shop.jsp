@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 pageEncoding="UTF-8"%>
+<%
+String id=request.getParameter("id");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +65,12 @@ pageEncoding="UTF-8"%>
 	<script src="../js/portal.js"></script>
 	<script type="text/javascript">
 		/* getCategories(1); */
-		getProducts(1);
+
+		if (<%=id%>)
+			{getProducts(<%=id%>);}
+		else{
+			getProducts(1);
+		}
 	</script>
 
   </body>
