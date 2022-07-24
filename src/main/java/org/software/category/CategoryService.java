@@ -19,7 +19,6 @@ import org.software.util.DataBase;
 @Path("/category")
 public class CategoryService {
 	@POST
-	//@Path("/")
 	@Consumes({ "application/json" })
 	@Produces("application/json")
 	public Response add(Category category) {
@@ -31,7 +30,7 @@ public class CategoryService {
 		int inserteds = 0;
 		try {
 			connection1 = database.getConnection("admin");
-			sql = "INSERT INTO categoria(nombre, 'descripción', imagen, publicado)";
+			sql = "INSERT INTO categoria(nombre, descripcion, imagen, publicado)";
 			sql += " VALUES (?, ?, ?, ?)";
 			preparedStatement1 = connection1.prepareStatement(sql);
 			preparedStatement1.setString(1, category.getNombre());
@@ -56,9 +55,7 @@ public class CategoryService {
 	}
 
 	@GET
-	//@Path("/")
 	@Produces("application/json")
-// @Produces("application/xml")
 	public CategoryList getAll() {
 		ArrayList<Category> categoryList = new ArrayList<Category>();
 		DataBase database = new DataBase();
@@ -74,7 +71,7 @@ public class CategoryService {
 			while (rs1.next()) {
 				int id = rs1.getInt("id");
 				String nombre = rs1.getString("nombre");
-				String descripcion = rs1.getString("descripción");
+				String descripcion = rs1.getString("descripcion");
 				String imagen = rs1.getString("imagen");
 				int publicado = rs1.getInt("publicado");
 				Category category = new Category();
@@ -95,7 +92,7 @@ public class CategoryService {
 		return new CategoryList(categoryList);
 	}
 
-/* 	@PUT
+	@PUT
 	@Path("/{id}")
 	@Consumes({ "application/json" })
 	@Produces("application/json")
@@ -108,13 +105,14 @@ public class CategoryService {
 		int updates = 0;
 		try {
 			connection1 = database.getConnection("admin");
-			sql = "UPDATE categories SET published=?, name=?, icon=?";
+			sql = "UPDATE categoria SET nombre=?,descripcion=?,imagen=?,publicado=?";
 			sql += " WHERE id=?";
 			preparedStatement1 = connection1.prepareStatement(sql);
-			preparedStatement1.setInt(1, category.getPublished());
-			preparedStatement1.setString(2, category.getName());
-			preparedStatement1.setString(3, category.getIcon());
-			preparedStatement1.setInt(4, id);
+			preparedStatement1.setString(1, category.getNombre());
+			preparedStatement1.setString(2, category.getDescripcion());
+			preparedStatement1.setString(3, category.getImagen());
+			preparedStatement1.setInt(4, category.getPublicado());
+			preparedStatement1.setInt(5, id);
 			updates = preparedStatement1.executeUpdate();
 		} catch (Exception e) {
 			System.out.println("Error: " + e.toString());
@@ -144,7 +142,7 @@ public class CategoryService {
 		int deleteds = 0;
 		try {
 			connection1 = database.getConnection("admin");
-			sql = "DELETE FROM categories WHERE id=?";
+			sql = "DELETE FROM categoria WHERE id=?";
 			preparedStatement1 = connection1.prepareStatement(sql);
 			preparedStatement1.setInt(1, id);
 			deleteds = preparedStatement1.executeUpdate();
@@ -161,5 +159,5 @@ public class CategoryService {
 			mensaje = "{\"mensaje\":\"Error al eliminar\"}";
 			return Response.status(400).entity(mensaje).build();
 		}
-	} */
+	}
 }

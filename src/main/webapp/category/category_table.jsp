@@ -2,18 +2,20 @@
 	style="width: 100%">
 	<thead>
 		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Icon</th>
-			<th>Published</th>
+			<th>id</th>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th>Imagen</th>
+			<th>Publicado</th>
 		</tr>
 	</thead>
 	<tfoot>
 		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Icon</th>
-			<th>Published</th>
+			<th>id</th>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th>Imagen</th>
+			<th>Publicado</th>
 		</tr>
 	</tfoot>
 </table>

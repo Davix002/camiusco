@@ -6,7 +6,7 @@
 			<input type="hidden" id="id" name="id" value="" />
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Category Form</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Añadir categoria</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -14,19 +14,23 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="name">Name</label> <input type="text"
-							class="form-control" id="name" name="name" placeholder="">
+						<label for="name">Nombre</label> <input type="text"
+							class="form-control" id="nombre" name="nombre" placeholder="">
 					</div>
 					<div class="form-group">
-						<label for="icon">Icon</label> <input type="text"
-							class="form-control" id="icon" name="icon" placeholder="">
+						<label for="icon">Descripcion</label> <input type="text"
+							class="form-control" id="descripcion" name="descripcion" placeholder="">
 					</div>
 					<div class="form-group">
-						<label for="published">Published</label>
+						<label for="icon">Imagen</label> <input type="text"
+							class="form-control" id="imagen" name="imagen" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="publicado">Publicado</label>
 						<!-- selected -->
-						<select id="published" name="published" class="form-control">
-							<option value="1">Published</option>
-							<option value="0">Not published</option>
+						<select id="publicado" name="publicado" class="form-control">
+							<option value="1">Publicado</option>
+							<option value="0">No publicado</option>
 						</select>
 					</div>
 				</div>
@@ -34,8 +38,7 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Cerrar</button>
-					<button type="button" class="btn btn-primary" id="sendJSON">Save
-						changes</button>
+					<button type="button" class="btn btn-primary" id="sendJSON">Guardar cambios</button>
 				</div>
 			</div>
 			<!-- end modal-content -->

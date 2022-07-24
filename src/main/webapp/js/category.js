@@ -1,5 +1,6 @@
 $(document).ready(function () {
     // var selected_class = "active";
+
     var selected_class = "selected";
     $("#success-alert").hide();
     $("#error-alert").hide();
@@ -8,13 +9,16 @@ $(document).ready(function () {
         "columns": [{
             "data": "id"
         }, {
-            "data": "name"
+            "data": "nombre"
         }, {
-            "data": "icon"
+            "data": "descripcion"
         }, {
-            "data": "published"
+            "data": "imagen"
+        }, {
+            "data": "publicado"
         }]
     });
+
     $('#categoryTable tbody').on('click', 'tr', function () {
         if ($(this).hasClass(selected_class)) {
             $(this).removeClass(selected_class);
@@ -23,6 +27,7 @@ $(document).ready(function () {
             $(this).addClass(selected_class);
         }
     });
+
     function ajaxCallRequest(f_method, f_url, f_data) {
         var f_contentType = 'application/json; charset=UTF-8';
         $.ajax({
@@ -60,6 +65,7 @@ $(document).ready(function () {
             }
         });
     }
+
     $("#sendJSON").click(function (event) {
         event.preventDefault();
         var form = $('#categoryForm');
@@ -67,6 +73,7 @@ $(document).ready(function () {
         var url = form.attr('action');
         if (method != "POST") {
             var id = document.getElementById("id").value;
+            console.log("esta es la url: "+url);
             url = url + id;
         }
         var jsonData = {};
@@ -75,13 +82,16 @@ $(document).ready(function () {
         });
         var data = JSON.stringify(jsonData);
         console.log(data);
+
         ajaxCallRequest(method, url, data);
     });
+    
     function editar(method) {
         var id = 0;
-        var name = "";
-        var icon = "";
-        var published = -1;
+        var nombre="";
+        var descripcion="";
+        var imagen="";
+        var publicado="";
 
         if (method != "POST") {
             var data = table.rows('.' + selected_class).data()[0];
@@ -104,10 +114,11 @@ $(document).ready(function () {
                 return;
             }
             else {
-                id = data.id;
-                name = data.name;
-                icon = data.icon;
-                published = data.published;
+                id=data.id;
+                nombre=data.nombre;
+                descripcion=data.descripcion;
+                imagen=data.imagen;
+                publicado=data.publicado;
             }
         }
 
@@ -120,11 +131,13 @@ $(document).ready(function () {
         if (method == "DELETE") {
             $("#sendJSON").html('Eliminar');
         }
+
         $("#categoryForm").attr("method", method);
         document.getElementById("id").value = id;
-        document.getElementById("name").value = name;
-        document.getElementById("icon").value = icon;
-        document.getElementById("published").value = published;
+        document.getElementById("nombre").value = nombre;
+        document.getElementById("descripcion").value = descripcion;
+        document.getElementById("imagen").value = imagen;
+        document.getElementById("publicado").value = publicado;
         $('#categoryModal').modal('show');
     }
     $("#adicionar").click(function (event) {

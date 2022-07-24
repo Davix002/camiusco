@@ -14,9 +14,11 @@
 	href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
 <link rel="stylesheet"
 	href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.min.css" />
-<title>eCommerce</title>
+<title>eCommerce camiusco</title>
+<jsp:include page="/portal/css.jsp" />
 </head>
 <body>
+	<jsp:include page="/portal/top-header-bar.jsp" />
 	<!-- Navigation -->
 	<jsp:include page="../portal/menu.jsp" />
 	<!-- Page Content -->
@@ -49,6 +51,6 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
 		
 	</script>
-	<script src="../js/category.js"></script>
+	<script src="/js/category.js"></script>
 </body>
 </html>

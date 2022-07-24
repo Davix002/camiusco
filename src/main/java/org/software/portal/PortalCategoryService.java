@@ -13,7 +13,7 @@ import org.software.util.DataBase;
 
 @Path("/portal")
 public class PortalCategoryService {
-	/* @GET
+	@GET
 	@Path("/categories")
 	@Produces("application/json")
 	public CategoryList read() {
@@ -26,19 +26,21 @@ public class PortalCategoryService {
 		try {
 			connection1 = database.getConnection("guest");
 			statement1 = connection1.createStatement();
-			sql = "select * from categories where published = 1";
-			sql += " order by name";
+			sql = "select * from categoria where publicado = 1";
+			sql += " order by nombre";
 			rs1 = statement1.executeQuery(sql);
 			while (rs1.next()) {
 				int id = rs1.getInt("id");
-				int published = rs1.getInt("published");
-				String name = rs1.getString("name");
-				String icon = rs1.getString("icon");
+				String nombre = rs1.getString("nombre");
+				String descripcion = rs1.getString("descripcion");
+				String imagen = rs1.getString("imagen");
+				int publicado = rs1.getInt("publicado");
 				Category category = new Category();
 				category.setId(id);
-				category.setPublished(published);
-				category.setName(name);
-				category.setIcon(icon);
+				category.setNombre(nombre);
+				category.setDescripcion(descripcion);
+				category.setImagen(imagen);
+				category.setPublicado(publicado);
 				categoryList.add(category);
 			}
 		} catch (Exception e) {
@@ -49,5 +51,5 @@ public class PortalCategoryService {
 			database.closeObject(connection1);
 		}
 		return new CategoryList(categoryList);
-	} */
+	}
 }
