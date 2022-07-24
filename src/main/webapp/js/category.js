@@ -13,7 +13,9 @@ $(document).ready(function () {
         }, {
             "data": "descripcion"
         }, {
-            "data": "imagen"
+            "data":"imagen",
+            "render": function (data) {
+                return '<img src="'+data+'" style="max-width: 100%;height: auto;"/>';}
         }, {
             "data": "publicado"
         }]
@@ -73,7 +75,6 @@ $(document).ready(function () {
         var url = form.attr('action');
         if (method != "POST") {
             var id = document.getElementById("id").value;
-            console.log("esta es la url: "+url);
             url = url + id;
         }
         var jsonData = {};
@@ -140,6 +141,7 @@ $(document).ready(function () {
         document.getElementById("publicado").value = publicado;
         $('#categoryModal').modal('show');
     }
+    
     $("#adicionar").click(function (event) {
         editar("POST");
     });

@@ -1,4 +1,4 @@
-<div class="float-right">
+<div class="pull-right">
 	<button type="button" class="btn btn-primary" id="adicionar">Adicionar</button>
 	<button type="button" class="btn btn-success" id="modificar">Modificar</button>
 	<button type="button" class="btn btn-info" id="eliminar">Eliminar</button>
