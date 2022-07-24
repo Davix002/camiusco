@@ -142,6 +142,9 @@ pageEncoding="UTF-8"%>
     
 <jsp:include page="/portal/scripts.jsp" />  
 
+<!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="../plugins/google-map/gmap.js"></script>
 
   </body>
   </html>

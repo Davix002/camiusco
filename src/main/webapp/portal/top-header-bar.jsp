@@ -14,7 +14,7 @@
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
-					<a href="index.jsp">
+					<a href="../index.jsp">
 						<!-- replace logo here -->
 						<svg width="225px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -79,6 +79,10 @@
 						</div>
 
 					</li><!-- / Cart -->
+
+					<li class="dropdown ">
+						<a href="../category">Category</a>
+					</li>
 
 					<!-- Search -->
 					<li class="dropdown search dropdown-slide">

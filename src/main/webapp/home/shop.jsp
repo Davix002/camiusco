@@ -18,7 +18,7 @@ pageEncoding="UTF-8"%>
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
   
   <jsp:include page="/portal/css.jsp" />
-
+	<%-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> --%>
 </head>
 
 <body id="body">
@@ -26,7 +26,6 @@ pageEncoding="UTF-8"%>
 <!-- Start Top Header Bar -->
 <jsp:include page="/portal/top-header-bar.jsp" />
 <!-- End Top Header Bar -->
-
 
 <!-- Main Menu Section -->
 <jsp:include page="/portal/menu.jsp" />
@@ -56,6 +55,15 @@ pageEncoding="UTF-8"%>
     =====================================-->
     
 	<jsp:include page="/portal/scripts.jsp" />
+
+	<%-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script> --%>
+
+	<script src="../js/portal.js"></script>
+	<script type="text/javascript">
+		/* getCategories(1); */
+		getProducts(1);
+	</script>
 
   </body>
   </html>

@@ -19,7 +19,7 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="index.jsp">Home</a>
+						<a href="../index.jsp">Home</a>
 					</li><!-- / Home -->
 
 

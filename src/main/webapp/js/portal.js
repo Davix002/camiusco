@@ -24,7 +24,8 @@ function getProducts(category_id) {
     $("#category_" + category_id).addClass('active');
     $.getJSON("../ws/portal/products/" + category_id, function (result) {
         data = result.data;
-        $("#div_products").empty();
+        console.log("lo que hay en la url: "+"../ws/portal/products/");
+        $("#div_producto").empty();
         for (var row = 0; row < data.length; row = row + 1) {
 
             var id = data[row].id;
@@ -33,27 +34,37 @@ function getProducts(category_id) {
             var imagen = data[row].imagen;
             var precio = data[row].precio;
             var descripcion = data[row].descripcion;
-            var url = "../item.jsp?id=" + id;
-            var item = '<div class="col-lg-4 col-md-6 mb-4">';
-            item += '<div class="card h-100">';
-            item += '<a id="link_title" href="' + url + '">';
-            item += '<img class="card-img-top" src="../fotos/' + imagen + '" alt="">';
-            item += '</a>';
-            item += '<div class="card-body">';
-            item += '<h4 class="card-title">';
-            item += '<a href="' + url + '">' + nombre + '</a>';
-            item += '</h4>';
-            item += '<h5>$' + precio + '</h5>';
-            item += '<p class="card-text">' + descripcion + '</p>';
-            item += '</div>';
-            item += '<div class="card-footer">';
-            item += '<small class="text-muted">';
-            item += '&#9733; &#9733; &#9733; &#9733;&#9734;';
-            item += '</small>';
-            item += '</div>';
-            item += '</div>';
-            item += '</div>';
-            $("#div_products").append(item);
+            var url = "../product-single.jsp?id=" + id;
+
+            var item ='<div class="col-md-4">';
+            item+='<div class="product-item">';
+            item+='<div class="product-thumb">';
+            /* item+='<span class="bage">Sale</span>'; */
+            item+='<img class="img-responsive" src="'+imagen+'" alt="product-img" />';
+            item+='<div class="preview-meta">';
+            item+='<ul>';
+            item+='<li>';
+            item+='<span  data-toggle="modal" data-target="#product-modal">';
+            item+='<i class="tf-ion-ios-search-strong"></i>';
+            item+='</span>';
+            item+='</li>';
+            item+='<li>';
+            item+='<a href="#!" ><i class="tf-ion-ios-heart"></i></a>';
+            item+='</li>';
+            item+='<li>';
+            item+='<a href="#!"><i class="tf-ion-android-cart"></i></a>';
+            item+='</li>';
+            item+='</ul>';
+            item+='</div>';
+            item+='</div>';
+            item+='<div class="product-content">';
+            item+='<h4><a href="'+url+'">'+nombre+'</a></h4>';
+            item+='<p class="price">'+precio+'</p>';
+            item+='</div>';
+            item+='</div>';
+            item+='</div>';
+            
+            $("#div_producto").append(item);
         }
     });
 }      

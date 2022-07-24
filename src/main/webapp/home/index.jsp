@@ -45,7 +45,6 @@ pageEncoding="UTF-8"%>
 			<h2>Trendy Products</h2>
 		</div>
 	</div>
-	
 	<jsp:include page="/portal/products.jsp" />
 </section>
 
@@ -63,6 +62,10 @@ Start Call To Action
     =====================================-->
     <jsp:include page="/portal/scripts.jsp" />
     
-
+  <script src="../js/portal.js"></script>
+	<script type="text/javascript">
+		/* getCategories(1); */
+		getProducts(1);
+	</script>
   </body>
   </html>
