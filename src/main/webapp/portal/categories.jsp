@@ -53,7 +53,7 @@ String texto5=messages.getString("texto5");
 			<div class="col-md-6">
 				<div class="category-box category-box-2">
 					<a href="shop.jsp?id=3">
-						<img src="../images/shop/category/category-3.jpg" alt="" />
+						<img src="../images/shop/category/category-3.jpg" alt="" style="height:100vh;object-fit:cover;"/>
 						<div class="content">
 							<h3><%=ropa_deportiva%></h3>
 							<p><%=texto5%></p>

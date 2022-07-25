@@ -59,9 +59,9 @@ String verificar=messages.getString("verificar");
 									<ul>
 										<%-- <li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li> --%>
-										<li><a href="shop.jsp"><%=tienda%></a></li>
-										<li><a href="checkout.jsp"><%=verificar%></a></li>
-										<li><a href="cart.jsp"><%=carrito%></a></li>
+										<li><a href="../home/shop.jsp"><%=tienda%></a></li>
+										<li><a href="../home/checkout.jsp"><%=verificar%></a></li>
+										<li><a href="../home/cart.jsp"><%=carrito%></a></li>
 
 									</ul>
 								</div>
@@ -81,9 +81,9 @@ String verificar=messages.getString("verificar");
 								<!-- Basic -->
 								<div class="col-lg-12 col-md-12 mb-sm-auto">
 									<ul>
-										<li><a href="shop.jsp?id=1"><%=buzos%></a></li>
-										<li><a href="shop.jsp?id=2"><%=camisetas%></a></li>
-										<li><a href="shop.jsp?id=3"><%=ropa_deportiva%></a></li>
+										<li><a href="../home/shop.jsp?categoria=1"><%=buzos%></a></li>
+										<li><a href="../home/shop.jsp?categoria=2"><%=camisetas%></a></li>
+										<li><a href="../home/shop.jsp?categoria=3"><%=ropa_deportiva%></a></li>
 
 									</ul>
 								</div>

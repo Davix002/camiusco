@@ -17,7 +17,7 @@ messages = ResourceBundle.getBundle("MesageBundle", currentLocale);
 String producto_moda=messages.getString("producto_moda");
 String inicio=messages.getString("inicio");
 String tienda=messages.getString("tienda");
-String id=request.getParameter("id");
+String categoria=request.getParameter("categoria");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,8 +88,8 @@ String id=request.getParameter("id");
 	<script type="text/javascript">
 		/* getCategories(1); */
 
-		if (<%=id%>)
-			{getProducts(<%=id%>);}
+		if (<%=categoria%>)
+			{getProducts(<%=categoria%>);}
 		else{
 			getProducts(1);
 		}
