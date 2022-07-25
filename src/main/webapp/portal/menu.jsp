@@ -59,14 +59,9 @@ String verificar=messages.getString("verificar");
 									<ul>
 										<%-- <li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li> --%>
-<<<<<<< HEAD
-										<li><a href="checkout.jsp">Checkout</a></li>
-										<li><a href="cart.jsp">Cart</a></li>
-=======
 										<li><a href="shop.jsp"><%=tienda%></a></li>
 										<li><a href="checkout.jsp"><%=verificar%></a></li>
 										<li><a href="cart.jsp"><%=carrito%></a></li>
->>>>>>> e46f1cd21d2c80f877547989d5b278bde2d56f42
 
 									</ul>
 								</div>
