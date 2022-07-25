@@ -1,3 +1,26 @@
+<%@ page import="java.util.*"%>
+<%
+String locale = request.getParameter("locale");
+Locale currentLocale = request.getLocale();
+String language = "es";
+String country = "CO";
+if (locale != null) {
+	language = locale.substring(0, 2);
+	country = locale.substring(3, 5);
+	currentLocale = new Locale(language, country);
+}
+ResourceBundle messages;
+messages = ResourceBundle.getBundle("MesageBundle", currentLocale);
+String inicio=messages.getString("inicio");
+String tienda=messages.getString("tienda");
+String buzos=messages.getString("buzos");
+String camisetas=messages.getString("camisetas");
+String ropa_deportiva=messages.getString("ropa_deportiva");
+String carrito=messages.getString("carrito");
+String categoria=messages.getString("categoria");
+String verificar=messages.getString("verificar");
+%>
+
 <section class="menu">
 	<nav class="navbar navigation">
 		<div class="container">
@@ -19,14 +42,14 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="../index.jsp">Home</a>
+						<a href="../index.jsp"><%=inicio%></a>
 					</li><!-- / Home -->
 
 
 					<!-- Shop -->
 					<li class="dropdown dropdown-slide">
 						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
-							role="button" aria-haspopup="true" aria-expanded="false">Shop <span
+							role="button" aria-haspopup="true" aria-expanded="false"><%=tienda%><span
 								class="tf-ion-ios-arrow-down"></span></a>
 						<div class="dropdown-menu">
 							<div class="row">
@@ -36,8 +59,14 @@
 									<ul>
 										<%-- <li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li> --%>
+<<<<<<< HEAD
 										<li><a href="checkout.jsp">Checkout</a></li>
 										<li><a href="cart.jsp">Cart</a></li>
+=======
+										<li><a href="shop.jsp"><%=tienda%></a></li>
+										<li><a href="checkout.jsp"><%=verificar%></a></li>
+										<li><a href="cart.jsp"><%=carrito%></a></li>
+>>>>>>> e46f1cd21d2c80f877547989d5b278bde2d56f42
 
 									</ul>
 								</div>
@@ -49,7 +78,7 @@
 					<!-- Categorias -->
 					<li class="dropdown dropdown-slide">
 						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
-							role="button" aria-haspopup="true" aria-expanded="false">Categor&Iacuteas <span
+							role="button" aria-haspopup="true" aria-expanded="false"><%=categoria%><span
 								class="tf-ion-ios-arrow-down"></span></a>
 						<div class="dropdown-menu">
 							<div class="row">
@@ -57,9 +86,9 @@
 								<!-- Basic -->
 								<div class="col-lg-12 col-md-12 mb-sm-auto">
 									<ul>
-										<li><a href="shop.jsp?id=1">Buzos</a></li>
-										<li><a href="shop.jsp?id=2">Camisetas</a></li>
-										<li><a href="shop.jsp?id=3">Ropa deportiva</a></li>
+										<li><a href="shop.jsp?id=1"><%=buzos%></a></li>
+										<li><a href="shop.jsp?id=2"><%=camisetas%></a></li>
+										<li><a href="shop.jsp?id=3"><%=ropa_deportiva%></a></li>
 
 									</ul>
 								</div>

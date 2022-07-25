@@ -1,8 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%
+String locale = request.getParameter("locale");
+Locale currentLocale = request.getLocale();
+String language = "es";
+String country = "CO";
+
+if (locale != null) {
+	language = locale.substring(0, 2);
+	country = locale.substring(3, 5);
+	currentLocale = new Locale(language, country);
+}
+ResourceBundle messages;
+messages = ResourceBundle.getBundle("MesageBundle", currentLocale);
+String producto_moda=messages.getString("producto_moda");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script type="text/javascript">
+	function setLanguage(){
+		var idioma = document.getElementById("idioma").value;
+		window.location = "index.jsp?locale=" + idioma;
+	}	
+</script>
+
 
   <!-- Basic Page Needs
   ================================================== -->
@@ -22,7 +47,6 @@ pageEncoding="UTF-8"%>
 </head>
 
 <body id="body">
-
 <!-- Start Top Header Bar -->
 <jsp:include page="/portal/top-header-bar.jsp" />
 <!-- End Top Header Bar -->
@@ -42,7 +66,7 @@ pageEncoding="UTF-8"%>
 
 	<div class="row">
 		<div class="title text-center">
-			<h2>Trendy Products</h2>
+			<h2><%=producto_moda%></h2>
 		</div>
 	</div>
 	<jsp:include page="/portal/products.jsp" />
