@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="category-box">
-					<a href="#!">
+					<a href="shop.jsp?id=1">
 						<img src="../images/shop/category/category-1.jpg" alt="" />
 						<div class="content">
 							<h3 style="color:#C0C0C0;">Buzos</h3>
@@ -17,7 +17,7 @@
 					</a>	
 				</div>
 				<div class="category-box">
-					<a href="#!">
+					<a href="shop.jsp?id=2">
 						<img src="../images/shop/category/category-2.jpg" alt="" />
 						<div class="content">
 							<h3>Camisetas</h3>
@@ -28,7 +28,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="category-box category-box-2">
-					<a href="#!">
+					<a href="shop.jsp?id=3">
 						<img src="../images/shop/category/category-3.jpg" alt="" />
 						<div class="content">
 							<h3>Ropa deportiva</h3>

@@ -20,11 +20,10 @@ function getCategories(category_id) {
 }
 
 function getProducts(category_id) {
-    $('.list-group-item').removeClass('active').addClass('');
-    $("#category_" + category_id).addClass('active');
+    /* $('.list-group-item').removeClass('active').addClass('');
+    $("#category_" + category_id).addClass('active'); */
     $.getJSON("../ws/portal/products/" + category_id, function (result) {
         data = result.data;
-        console.log("lo que hay en la url: "+"../ws/portal/products/");
         $("#div_producto").empty();
         for (var row = 0; row < data.length; row = row + 1) {
 
@@ -35,12 +34,11 @@ function getProducts(category_id) {
             var precio = data[row].precio;
             var descripcion = data[row].descripcion;
             var url = "../product-single.jsp?id=" + id;
-
             var item ='<div class="col-md-4">';
-            item+='<div class="product-item">';
+            item+='<div class="product-item" id="'+id+'" onclick="getModal('+id+')">';
             item+='<div class="product-thumb">';
             /* item+='<span class="bage">Sale</span>'; */
-            item+='<img class="img-responsive" src="'+imagen+'" alt="product-img" />';
+            item+='<img id="imagenProducto" class="img-responsive" src="'+imagen+'" alt="product-img" />';
             item+='<div class="preview-meta">';
             item+='<ul>';
             item+='<li>';
@@ -60,11 +58,29 @@ function getProducts(category_id) {
             item+='<div class="product-content">';
             item+='<h4><a href="'+url+'">'+nombre+'</a></h4>';
             item+='<p class="price">'+precio+'</p>';
+            item+='<p id="descripProducto" hidden>'+descripcion+'</p>';
             item+='</div>';
             item+='</div>';
             item+='</div>';
-            
+
             $("#div_producto").append(item);
         }
     });
-}      
+}     
+
+
+function getModal(product_id) {
+
+        var imagenProducto=$("#"+product_id+" .product-thumb img").attr("src");
+        $("#imagenModal").attr("src", imagenProducto);
+
+        var nombreProducto=$("#"+product_id+" .product-content h4 a").html();
+        $("#tituloModal").html(nombreProducto);
+
+        var precioProducto=$("#"+product_id+" .product-content .price").html();
+        $("#precioProducto").html(precioProducto);
+        
+        var descripProducto=$("#"+product_id+" .product-content #descripProducto").html();
+        $("#descripModalProducto").html(descripProducto);
+
+}    

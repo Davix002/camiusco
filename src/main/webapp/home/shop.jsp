@@ -71,6 +71,7 @@ String id=request.getParameter("id");
 		else{
 			getProducts(1);
 		}
+		
 	</script>
 
   </body>

@@ -36,7 +36,6 @@
 									<ul>
 										<%-- <li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li> --%>
-										<li><a href="shop.jsp">Shop</a></li>
 										<li><a href="checkout.jsp">Checkout</a></li>
 										<li><a href="cart.jsp">Cart</a></li>
 
